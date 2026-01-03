@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Пространство Деймоса</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body id="title" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+	<div id="stars"></div>
+	<div id="stars2"></div>
+	<div id="stars3"></div>
+
+	<div id="preloader" style="display: none;">
+		<div class="spinner-border text-primary" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+	</div>
+
+	<div id="content" data-aos="fade-up" class="aos-init aos-animate">
+		<h1 class="animate__animated animate__fadeInDown text-center mb-5">Д Е Й М О С</h1>
+
+		<div class="row g-4">
+			<!-- Первый ряд - Расписание режимов -->
+			<div class="col-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fas fa-calendar-alt"></i> Расписание режимов</h5>
+					<h4 style="color: #f0f0f0;">ВЕЧНЫЙ СЕКРЕТ</h4>
+                    <p style="color: #f0f0f0;">
+					По названию и так понятно, что у нас постоянно на сервере секрет и игроки не могут знать какой сейчас режим раундстартом. Это позволяет Деймосу избавляться от ЛРП, а также использования мета-информации по которой игроки могут готовиться к РДМу набрав себе необходимое оружие.
+					</p>
+					<p style="color: #ebb30c;">
+						Секретширы: Если на сервере уже более 2-ух секретширов мы можем добавить любой геймрул из режимов, кроме «Разумного вируса» и подобных «Кесслер», к примеру «Выживание».
+					</p>
+					<p style="color: #FF2400;">
+						Администрация. Добавляя режимы и/или устанавливая секретные РДМы, пожалуйста выбирайте того, кто будет следить за раундом и КСО. Если на сервере уже более 2-ух РДМов подряд, мы в обязательном порядке устанавливаем секретшир на один раунд. 
+					</p>
+				</div>
+			</div>
+
+			<!-- Второй ряд - Про гост-роли антагонистов и проведение ПЦК -->
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fas fa-heart"></i> Гост-роли антагонистов</h5>
+					<p class="card-text">
+						Гост-роли сделаны преимущественно для игроков и шансы на них должны быть равны для всех. Часто из-за преимущества в виде админ-уведомлений игроки могут не успевать взять роль.
+					</p>
+					<p style="color: #58a6ff;">
+						Примечание: Администрация, что находится в deadmin весь раунд может брать их на тех же правах, что и игроки.
+				</div>
+			</div>
+
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fas fa-user-tie"></i> Проведение ПЦК</h5>
+					<p class="card-text">
+						Если вы видите причину для отправки ПЦК, будьте добры сделать это до 1:40. После - ваше влияние ограничено факсом и объявлениями. Часто ПЦК прилетает поздно, из-за чего смена растягивается до неадекватного времени. Так же ПЦК не должен сидеть на станции до третьего часа смены. <br>
+					</p>
+					<p></p>
+					<p></p>
+				</div>
+			</div>
+
+			<!-- Третий ряд - Про молитвы и выдачу целей антагонистам -->
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fa-solid fa-book-bible"></i> Обмен и выдача предметов игрокам через молитвы</h5>
+					<p class="card-text">
+						Мы не выдаём предметы, одежду или любую другую вещь за бесплатно. Выдача предметов игрокам осуществляется только через алтарь для молитв и за цену сопостовимую предмету которую данный игрок хочет, то-есть мы не выдаём плащ ОСЩ за 1 единицу дюраткани.
+					</p>
+				</div>
+			</div>
+
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fa-solid fa-dice-six"></i> Выдача целей антаганистам</h5>
+					<p class="card-text">
+						Единственная цель выдаваемая агентам если те попросят это только убийство на другого агента, выдача других целей игрокам <strong>ЗАПРЕЩЕНА!</strong>
+					</p>
+					<p></p>
+					<p></p>
+				</div>
+			</div>
+
+			<!-- Четвертый ряд - Уточнение правил и их ужесточение -->
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fas fa-headset"></i> Уточнения по некоторым правилам</h5>
+					<p class="card-text">
+						<strong>Правило 1.1:</strong> Манч зачастую считается внутриигровой ситуацией
+						Подобные случаи должны решаться через Службу Безопасности
+						Систематические или критические нарушения всё равно могут рассматриваться модерацией <br>
+						<strong>Правило 3 и 4:</strong> Регулярное использование мемных фраз
+						Откровенное НРП и неадекватный отыгрыш
+						Полное несоответствие выбранной роли <br>
+						<strong>Правило 4.2:</strong> Командование и сотрудники СБ должны соответствовать роли
+						Полное игнорирование рабочих обязанностей
+						Регулярное или критическое нарушение СРП <br>
+						<strong>Правило 5 и 5.1:</strong> Мелкие антагонисты (агенты, пираты и др.):
+						Запрещено устраивать беспричинный РДМ
+						Разрешены убийства только для самообороны или выполнения цели
+						Должны действовать разумно и скрытно
+						Чрезмерно шумная и деструктивная игра теперь будет наказываться
+					</p>
+					<p></p>
+					<p></p>
+				</div>
+			</div>
+
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fas fa-theater-masks"></i> Ужесточение наказаний по ЛРП</h5>
+					<p class="card-text">
+						Модерация Деймоса, я заметил, что у нас всё больше и больше проявляется ЛРП хотя наш сервер является МРП. Я решил, что необходимо ужесточить правила. <br>
+						Правила по которым вы теперь должны чаще наказывать: <br>
+						<strong>Правило 3:</strong> Нарушение игровой атмосферы - отход от отыгрыша роли своего персонажа, нарушающий общую атмосферу и концепцию игры <br>
+						<strong>Правило 4:</strong> Логика персонажей - отыгрыш, идущий вразрез с сеттингом и/или предысторией.
+					</p>
+					<p class="card-text">
+						Теперь вы должны следить даже за уставной речью, больше нет необходимости выдавать устные предупреждения. Каждое предупреждение должно быть занесено игрокам в заметки.
+					</p>
+					<p style="color: gray; font-size: 0.8em;">Также к правилам относятся и их подпункты</p>
+				</div>
+			</div>
+
+			<!-- Пятый ряд - Пустой сервер и запрет на доп. цель -->
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fa-solid fa-server"></i> Пустой сервер без администрации</h5>
+					<p class="card-text">
+						Последний из отдела на сервере который планирует уйти в раунд или же выйти обязан отправить уведомление в общий чат о том, что вы хотите сделать (обязательно с масспингом роли модератора/ментора Деймос). Пустой сервер и отсутствие пинга коллег может послужить причиной для выдачи наказания.
+					</p>
+				</div>
+			</div>
+
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fa-solid fa-house"></i> Домой, Уолтер</h5>
+					<p class="card-text">
+						Мы не даём вторую цель ни в каких случаях (кроме ивентов). Даже если на 20 минуте сделали цель. Можете отправить ПЦК для проверки, но не вторую цель. После проверки 2 исхода - 1. Увольнение Капитана/глав по ситуации из-за лжи насчёт выполнения цели. 2. Всё хорошо, вызываете эвак.
+					</p>
+				</div>
+			</div>
+
+			<!-- Шестой ряд - Запрет на добавление геймрулов в выживание и ЭС при блобе-->
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fas fa-ban"></i> Запрет на добавление геймрулов при режиме «Выживание»</h5>
+					<p class="card-text">
+						С данного момента мы не спавним геймрулы антагов в режиме Выживания. Игра должна давать геймрулы сама, а не админы.
+						Мы не даём роли блоба больше чем 2 в режиме блоб.
+						Мы не спавним новых главных антагонистов, если прошлые главные антаги раунда умерли/проиграли.
+						Мы не даём роль старшего юнитолога больше чем 2.
+						Если в раунде нет антагов совсем, то можно раздать до двух воров и одного предателя. Помните и думайте своей головой. Антагонист проиграл? Значит он <strong>ПРОИГРАЛ</strong>. А не вечный спавн антагов, пока станция окончательно не умрёт.
+					</p>
+				</div>
+			</div>
+
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fa-solid fa-skull"></i> Эскадрон смерти при блобе</h5>
+					<p class="card-text">
+						Эскадрон смерти при блобе всё также запрещён по причине того, что он вызывается к тому моменту когда существование Эскадрона является обычным затягиванием конца раунда.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<footer class="text-center text-light small mt-5" style="color: #d1d1d1 !important; opacity: 0.8;">
+			Последнее обновление: Январь 2026 © botcott & css by Akitovsky
+		</footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	
+	<!-- Старфилд -->
+	<script>
+		// Starfield animation from https://github.com/CodeMoreira/html-starfield.git
+		document.addEventListener('DOMContentLoaded', function() {
+			function createStarfield(containerId, count, speed, size, color) {
+				const container = document.getElementById(containerId);
+				if (!container) return;
+				
+				for (let i = 0; i < count; i++) {
+					const star = document.createElement('div');
+					star.style.position = 'absolute';
+					star.style.width = `${Math.random() * size}px`;
+					star.style.height = star.style.width;
+					star.style.backgroundColor = color;
+					star.style.borderRadius = '50%';
+					star.style.left = `${Math.random() * 100}%`;
+					star.style.top = `${Math.random() * 100}%`;
+					star.style.opacity = Math.random() * 0.8 + 0.2;
+					
+					const duration = 10 + Math.random() * speed;
+					star.style.animation = `moveStar ${duration}s linear infinite`;
+					
+					container.appendChild(star);
+				}
+			}
+			
+			createStarfield('stars', 150, 20, 2, '#ffffff');
+			createStarfield('stars2', 75, 40, 3, '#d1d1d1');
+			createStarfield('stars3', 25, 60, 4, '#a1a1a1');
+			
+			const style = document.createElement('style');
+			style.textContent = `
+				@keyframes moveStar {
+					from {
+						transform: translateY(0px) translateX(0px);
+					}
+					to {
+						transform: translateY(-1000px) translateX(100px);
+					}
+				}
+				
+				#stars, #stars2, #stars3 {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: -1;
+					pointer-events: none;
+				}
+				
+				#stars {
+					z-index: -3;
+				}
+				
+				#stars2 {
+					z-index: -2;
+				}
+				
+				#stars3 {
+					z-index: -1;
+				}
+			`;
+			document.head.appendChild(style);
+		});
+	</script>
+</body>
+</html>
+
+
+<!-- Экзистенз сын берёзы -->
+<!-- Клянусь я не пиздил сайт у титана -->
