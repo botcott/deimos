@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Пространство Деймоса</title>
+	<title>Деймос</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -14,13 +14,13 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body id="title" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
+	<div id="snow"></div>
+	<div id="snow2"></div>
+	<div id="snow3"></div>
 
 	<div id="preloader" style="display: none;">
 		<div class="spinner-border text-primary" role="status">
-			<span class="visually-hidden">Loading...</span>
+			<span class="visually-hidden">Загрузка...</span>
 		</div>
 	</div>
 
@@ -34,19 +34,17 @@
 					<h5 class="card-title"><i class="fas fa-calendar-alt"></i> Расписание режимов</h5>
 					<h4 style="color: #f0f0f0;">ВЕЧНЫЙ СЕКРЕТ</h4>
                     <p style="color: #f0f0f0;">
-					По названию и так понятно, что у нас постоянно на сервере секрет и игроки не могут знать какой сейчас режим раундстартом. Это позволяет Деймосу избавляться от ЛРП, а также использования мета-информации по которой игроки могут готовиться к РДМу набрав себе необходимое оружие.
+						По названию и так понятно, что у нас постоянно на сервере секрет и игроки не могут знать какой сейчас режим раундстартом. Это позволяет Деймосу избавляться от ЛРП, а также использования мета-информации по которой игроки могут готовиться к РДМу набрав себе необходимое оружие. <br>
 					</p>
-					<p style="color: #ebb30c;">
-						Секретширы: Если на сервере уже более 2-ух секретширов мы можем добавить любой геймрул из режимов, кроме «Разумного вируса» и подобных «Кесслер», к примеру «Выживание».
-					</p>
-					<p style="color: #FF2400;">
-						Администрация. Добавляя режимы и/или устанавливая секретные РДМы, пожалуйста выбирайте того, кто будет следить за раундом и КСО. Если на сервере уже более 2-ух РДМов подряд, мы в обязательном порядке устанавливаем секретшир на один раунд. 
+					<p style="color: #ef3636;">
+						Секретширы: Если на сервере уже более 2-ух секретширов мы можем добавить любой геймрул из режимов, кроме «Разумного вируса» и подобных «Кесслер», к примеру «Выживание». <br>
+						Добавляя режимы и/или устанавливая секретные РДМы, пожалуйста выбирайте того, кто будет следить за раундом и КСО. Если на сервере уже более 2-ух РДМов подряд, мы в обязательном порядке устанавливаем секретшир на один раунд. 
 					</p>
 				</div>
 			</div>
 
 			<!-- Второй ряд - Про гост-роли антагонистов и проведение ПЦК -->
-			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
 				<div class="card p-4 animate__animated animate__zoomIn">
 					<h5 class="card-title"><i class="fas fa-heart"></i> Гост-роли антагонистов</h5>
 					<p class="card-text">
@@ -57,7 +55,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
 				<div class="card p-4 animate__animated animate__zoomIn">
 					<h5 class="card-title"><i class="fas fa-user-tie"></i> Проведение ПЦК</h5>
 					<p class="card-text">
@@ -77,7 +75,7 @@
 					</p>
 				</div>
 			</div>
-
+			
 			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
 				<div class="card p-4 animate__animated animate__zoomIn">
 					<h5 class="card-title"><i class="fa-solid fa-dice-six"></i> Выдача целей антаганистам</h5>
@@ -131,7 +129,7 @@
 			</div>
 
 			<!-- Пятый ряд - Пустой сервер и запрет на доп. цель -->
-			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
 				<div class="card p-4 animate__animated animate__zoomIn">
 					<h5 class="card-title"><i class="fa-solid fa-server"></i> Пустой сервер без администрации</h5>
 					<p class="card-text">
@@ -140,7 +138,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
 				<div class="card p-4 animate__animated animate__zoomIn">
 					<h5 class="card-title"><i class="fa-solid fa-house"></i> Домой, Уолтер</h5>
 					<p class="card-text">
@@ -150,7 +148,7 @@
 			</div>
 
 			<!-- Шестой ряд - Запрет на добавление геймрулов в выживание и ЭС при блобе-->
-			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
 				<div class="card p-4 animate__animated animate__zoomIn">
 					<h5 class="card-title"><i class="fas fa-ban"></i> Запрет на добавление геймрулов при режиме «Выживание»</h5>
 					<p class="card-text">
@@ -163,7 +161,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
 				<div class="card p-4 animate__animated animate__zoomIn">
 					<h5 class="card-title"><i class="fa-solid fa-skull"></i> Эскадрон смерти при блобе</h5>
 					<p class="card-text">
@@ -171,10 +169,24 @@
 					</p>
 				</div>
 			</div>
+
+		<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+			<div class="card p-4 animate__animated animate__zoomIn">
+				<h5 class="card-title"><i class="fa-solid fa-eye-slash"></i> Установка секретных режимов</h5>
+				<p class="card-text">
+					Мы больше не ставим секретные режимы как раньше, теперь мы ставим по вот такому примеру: <br>
+					Расширенный:<code> setgamepreset Extended 1 Secret</code> <br>
+					Выживание:<code> setgamepreset Survival 1 Secret</code> <br>
+					Осада круга:<code> setgamepreset SiegeOfTheCircle 1 Secret</code> <br>
+					Обычный секрет:<code> setgamepreset Secret</code>
+
+				</p>
+			</div>
 		</div>
+	</div>
 
 		<footer class="text-center text-light small mt-5" style="color: #d1d1d1 !important; opacity: 0.8;">
-			Последнее обновление: Январь 2026 © botcott
+			Последнее обновление: 16.01.2026 © botcott
 		</footer>
 	</div>
 
@@ -183,7 +195,6 @@
 	
 	<!-- Старфилд -->
 	<script>
-		// Starfield animation from https://github.com/CodeMoreira/html-starfield.git
 		document.addEventListener('DOMContentLoaded', function() {
 			function createStarfield(containerId, count, speed, size, color) {
 				const container = document.getElementById(containerId);
@@ -201,55 +212,16 @@
 					star.style.opacity = Math.random() * 0.8 + 0.2;
 					
 					const duration = 10 + Math.random() * speed;
-					star.style.animation = `moveStar ${duration}s linear infinite`;
+					star.style.animation = `moveSnow ${duration}s linear infinite`;
 					
 					container.appendChild(star);
 				}
 			}
 			
-			createStarfield('stars', 150, 20, 2, '#ffffff');
-			createStarfield('stars2', 75, 40, 3, '#d1d1d1');
-			createStarfield('stars3', 25, 60, 4, '#a1a1a1');
-			
-			const style = document.createElement('style');
-			style.textContent = `
-				@keyframes moveStar {
-					from {
-						transform: translateY(0px) translateX(0px);
-					}
-					to {
-						transform: translateY(-1000px) translateX(100px);
-					}
-				}
-				
-				#stars, #stars2, #stars3 {
-					position: fixed;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					z-index: -1;
-					pointer-events: none;
-				}
-				
-				#stars {
-					z-index: -3;
-				}
-				
-				#stars2 {
-					z-index: -2;
-				}
-				
-				#stars3 {
-					z-index: -1;
-				}
-			`;
-			document.head.appendChild(style);
+			createStarfield('snow', 150, 30, 4, 'rgba(255, 255, 255, 0.8)');
+			createStarfield('snow2', 75, 45, 6, 'rgba(255, 255, 255, 0.6)');
+			createStarfield('snow3', 25, 60, 8, 'rgba(255, 255, 255, 0.4)');
 		});
 	</script>
 </body>
 </html>
-
-
-<!-- Экзистенз сын берёзы -->
-<!-- Клянусь я не пиздил сайт у титана -->
