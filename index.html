@@ -26,7 +26,7 @@
 	</div>
 
 	<div id="content" data-aos="fade-up" class="aos-init aos-animate">
-		<h1 class="animate__animated animate__fadeInDown text-center mb-5">ДЕЙМОС</h1>
+		<h1 class="animate__animated animate__fadeInDown text-center mb-4">ДЕЙМОС</h1>
 
 		<div class="row g-4">
 			<!-- Первый ряд - Расписание режимов -->
@@ -125,7 +125,7 @@
 					<p class="card-text">
 						Теперь вы должны следить даже за уставной речью, больше нет необходимости выдавать устные предупреждения. Каждое предупреждение должно быть занесено игрокам в заметки.
 					</p>
-					<p style="color: gray; font-size: 0.8em;">Также к правилам относятся и их подпункты</p>
+					<p style="color: gray; font-size: 0.8em;">Также к правилам относятся и их подпункты</p><br>
 				</div>
 			</div>
 
@@ -148,7 +148,7 @@
 				</div>
 			</div>
 
-			<!-- Шестой ряд - Запрет на добавление геймрулов в выживание и ЭС при блобе-->
+			<!-- Шестой ряд - Запрет на добавление геймрулов в выживание и уменьшение размера-->
 			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
 				<div class="card p-4 animate__animated animate__zoomIn">
 					<h5 class="card-title"><i class="fas fa-ban"></i> Запрет на добавление геймрулов при режиме «Выживание»</h5>
@@ -164,30 +164,47 @@
 
 			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
 				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fa-solid fa-arrow-down"></i> Уменьшение роста</h5>
+					<p class="card-text">
+						В общем по многочисленным просьбам на Деймосе разрешено изменение роста, но! Изменить размер игрока можно только раундстартом или же когда он только появился на станции и его никто не видел. Чтобы изменить размер игрока мы используем команду:
+						<br><br>
+						<code>> ent ID scale:multiply SCALE</code> <br>
+						В <code>ID</code> мы вносим _netId персонажа, <br>
+						В <code>SCALE</code> мы вносим значение от 0.9 до 1.1, <br>
+						Символ <code>></code> обязателен и без него ничего не получится.
+
+					</p>
+				</div>
+			</div>
+
+			<!-- Седьмой ряд - Установка секретов по новому, запрет на ЭС при блобе -->
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
+				<div class="card p-4 animate__animated animate__zoomIn">
+					<h5 class="card-title"><i class="fa-solid fa-eye-slash"></i> Установка секретных режимов</h5>
+					<p class="card-text">
+						Мы больше не ставим секретные режимы как раньше, теперь мы ставим по вот такому примеру: <br>
+						Расширенный:<code> setgamepreset Extended 1 Secret</code> <br>
+						Выживание:<code> setgamepreset Survival 1 Secret</code> <br>
+						Осада круга:<code> setgamepreset SiegeOfTheCircle 1 Secret</code> <br>
+						Обычный секрет:<code> setgamepreset Secret</code>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+				<div class="card p-4 animate__animated animate__zoomIn">
 					<h5 class="card-title"><i class="fa-solid fa-skull"></i> Эскадрон смерти при блобе</h5>
 					<p class="card-text">
 						Эскадрон смерти при блобе всё также запрещён по причине того, что он вызывается к тому моменту когда существование Эскадрона является обычным затягиванием конца раунда.
 					</p>
 				</div>
 			</div>
-
-		<div class="col-lg-6 aos-init aos-animate" data-aos="fade-left">
-			<div class="card p-4 animate__animated animate__zoomIn">
-				<h5 class="card-title"><i class="fa-solid fa-eye-slash"></i> Установка секретных режимов</h5>
-				<p class="card-text">
-					Мы больше не ставим секретные режимы как раньше, теперь мы ставим по вот такому примеру: <br>
-					Расширенный:<code> setgamepreset Extended 1 Secret</code> <br>
-					Выживание:<code> setgamepreset Survival 1 Secret</code> <br>
-					Осада круга:<code> setgamepreset SiegeOfTheCircle 1 Secret</code> <br>
-					Обычный секрет:<code> setgamepreset Secret</code>
-
-				</p>
-			</div>
 		</div>
 	</div>
 
+
 		<footer class="text-center text-light small mt-5" style="color: #d1d1d1 !important; opacity: 0.8;">
-			Последнее обновление: 16.01.2026 © botcott
+			Последнее обновление: 18.01.2026 © botcott
 		</footer>
 	</div>
 
@@ -197,31 +214,31 @@
 	<!-- Старфилд -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-			function createStarfield(containerId, count, speed, size, color) {
+			function createSnowfield(containerId, count, speed, size, color) {
 				const container = document.getElementById(containerId);
 				if (!container) return;
 				
 				for (let i = 0; i < count; i++) {
-					const star = document.createElement('div');
-					star.style.position = 'absolute';
-					star.style.width = `${Math.random() * size}px`;
-					star.style.height = star.style.width;
-					star.style.backgroundColor = color;
-					star.style.borderRadius = '50%';
-					star.style.left = `${Math.random() * 100}%`;
-					star.style.top = `${Math.random() * 100}%`;
-					star.style.opacity = Math.random() * 0.8 + 0.2;
+					const snow = document.createElement('div');
+					snow.style.position = 'absolute';
+					snow.style.width = `${Math.random() * size}px`;
+					snow.style.height = snow.style.width;
+					snow.style.backgroundColor = color;
+					snow.style.borderRadius = '50%';
+					snow.style.left = `${Math.random() * 100}%`;
+					snow.style.top = `${Math.random() * 50}%`;
+					snow.style.opacity = Math.random() * 0.8 - 0.3;
 					
 					const duration = 10 + Math.random() * speed;
-					star.style.animation = `moveSnow ${duration}s linear infinite`;
+					snow.style.animation = `moveSnow ${duration}s linear infinite`;
 					
-					container.appendChild(star);
+					container.appendChild(snow);
 				}
 			}
 			
-			createStarfield('snow', 150, 30, 4, 'rgba(255, 255, 255, 0.8)');
-			createStarfield('snow2', 75, 45, 6, 'rgba(255, 255, 255, 0.6)');
-			createStarfield('snow3', 25, 60, 8, 'rgba(255, 255, 255, 0.4)');
+			createSnowfield('snow', 150, 30, 2, 'rgba(255, 255, 255, 0.8)');
+			createSnowfield('snow2', 75, 45, 4, 'rgba(255, 255, 255, 0.6)');
+			createSnowfield('snow3', 25, 60, 6, 'rgba(255, 255, 255, 0.4)');
 		});
 	</script>
 </body>
