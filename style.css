@@ -98,6 +98,11 @@ p {
     transition: all 0.3s ease;
 }
 
+.removed .card:hover {
+    border-color: gray;
+}
+
+
 .card:hover {
     border-color: var(--heading-color);
 }
