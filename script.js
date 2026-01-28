@@ -1,6 +1,6 @@
 // Настройки
 const SERVER_IP = '185.97.255.17:1216'; // Deimos
-const SERVER_URL = `http://${SERVER_IP}/status`;
+const SERVER_URL = `https://${SERVER_IP}/status`;
 const REFRESH_INTERVAL = 5000;
 
 // Элементы
