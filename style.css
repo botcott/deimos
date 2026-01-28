@@ -117,6 +117,10 @@ p {
     background: rgba(10, 10, 26, 0.95) !important;
 }
 
+.center {
+    color: white;
+}
+
 .navbar-brand {
     color: var(--accent) !important;
     font-weight: 700;
@@ -187,5 +191,61 @@ p {
   }
   to {
     transform: translateY(1000px) translateX(-150px);
+  }
+}
+
+.server-status-card {
+  width: 100%;
+  max-width: 360px;
+  max-height: 260px;
+  margin: 20px auto 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.server-status-card .card-title {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.server-status-card .card-body {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.server-status-card p {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.4;
+}
+
+.server-status-card #players-current,
+.server-status-card #server-round,
+.server-status-card #server-map,
+.server-status-card #server-preset,
+.server-status-card #server-ip,
+.server-status-card #server-status {
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+@media (max-width: 480px) {
+  .server-status-card {
+    margin: 16px auto 16px;
+    padding: 14px;
+    max-width: 95%;
+  }
+  .server-status-card .card-title {
+    font-size: 1.1rem;
+  }
+  .server-status-card p {
+    margin: 6px 0;
+    font-size: 0.9rem;
   }
 }

@@ -26,7 +26,18 @@
 	</div>
 
 	<div id="content" data-aos="fade-up" class="aos-init aos-animate">
-		<h1 class="animate__animated animate__fadeInDown text-center mb-4">ДЕЙМОС</h1>
+		<h1 class="animate__animated animate__fadeInDown text-center mb-1">ДЕЙМОС</h1>
+
+		<div class="card server-status-card">
+		<div class="card-body">
+			<p>Игроки онлайн: <span id="players-current">—</span></p>
+			<p>Раунд: <span id="server-round">—</span></p>
+			<p>Карта: <span id="server-map">—</span></p>
+			<p>Режим: <span id="server-preset">—</span></p>
+      		<p>IP: <span id="server-ip">—</span></p>
+      		<p>Статус: <span id="server-status">Загрузка...</span></p>
+		</div>
+		</div>
 
 		<div class="row g-4">
 			<!-- Первый ряд - Расписание режимов -->
@@ -242,5 +253,6 @@
 			createSnowfield('snow3', 25, 60, 6, 'rgba(255, 255, 255, 0.4)');
 		});
 	</script>
+	<script src="script.js"></script>
 </body>
 </html>
