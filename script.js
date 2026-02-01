@@ -1,8 +1,6 @@
-// Настройки
+// API FETCH-Start
 const SERVER_IP = '185.97.255.17:1216'; // Deimos
-const PROXY_URL = 'https://cors-anywhere.herokuapp.com/'; // Public proxy
 const API_URL = `http://${SERVER_IP}/status`;
-const SERVER_URL = PROXY_URL + API_URL;
 const REFRESH_INTERVAL = 5000;
 
 // Элементы
@@ -15,23 +13,26 @@ const serverPreset = document.getElementById('server-preset');
 
 async function fetchServerStatus() {
   try {
-    const response = await fetch(SERVER_URL, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Origin': window.location.origin
-      }
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(API_URL)}`;
+    const response = await fetch(proxyUrl, {
+      method: 'GET'
     });
 
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    if (!response.ok)
+      throw new Error(`HTTP ${response.status}`);
 
     const data = await response.json();
 
+    if (!data.contents)
+      throw new Error('Нет полученной информации от прокси');
+
+    const serverData = JSON.parse(data.contents);
+
     // Обновляем интерфейс
-    playersCount.textContent = `${data.players} из ${data.soft_max_players}` || '—';
-    serverRound.textContent = data.round_id || '—';
-    serverMap.textContent = data.map || '—';
-    serverPreset.textContent = data.preset || '—';
+    playersCount.textContent = `${serverData.players} из ${serverData.soft_max_players}` || '—';
+    serverRound.textContent = serverData.round_id || '—';
+    serverMap.textContent = serverData.map || '—';
+    serverPreset.textContent = serverData.preset || '—';
     serverIp.textContent = SERVER_IP;
     serverStatus.textContent = 'Онлайн';
     serverStatus.style.color = '#03da39';
@@ -51,9 +52,57 @@ function updateOfflineState() {
   serverStatus.textContent = 'Недоступен';
   serverStatus.style.color = '#eb2e51';
 }
+// API FETCH-End
+
+// FOOTER-Start
+async function updateFooter() {
+    const footer = document.querySelector('footer.footer');
+
+    const files = [];
+
+    // HTML
+    files.push({ type: 'HTML', url: window.location.href });
+
+    // CSS
+    document.querySelectorAll('link[rel="stylesheet"][href]').forEach(link => {
+        files.push({ type: 'CSS', url: link.href });
+    });
+
+    // JS
+    document.querySelectorAll('script[src]').forEach(script => {
+        files.push({ type: 'JS', url: script.src });
+    });
+
+    const results = {};
+
+    for (const file of files) {
+        try {
+            const response = await fetch(file.url, { method: 'HEAD' });
+            const lastModified = response.headers.get('Last-Modified');
+
+            if (lastModified) {
+                const date = new Date(lastModified);
+                const formatted = date.toLocaleDateString('ru-RU'); // 18.01.2026
+                results[file.type] = formatted;
+            } else {
+                results[file.type] = 'н/д';
+            }
+        } catch (err) {
+            results[file.type] = 'ошибка';
+        }
+    }
+
+    const htmlDate = results.HTML || 'н/д';
+    const cssDate = results.CSS || 'н/д';
+    const jsDate = results.JS || 'н/д';
+
+    footer.textContent = `HTML: ${htmlDate} | CSS: ${cssDate} | JS: ${jsDate} © botcott`
+}
+// FOOTER-End
 
 // Запуск
 document.addEventListener('DOMContentLoaded', () => {
   fetchServerStatus();
+  updateFooter()
   setInterval(fetchServerStatus, REFRESH_INTERVAL);
 });
